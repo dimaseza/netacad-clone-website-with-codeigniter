@@ -48,7 +48,7 @@ class Register extends CI_Controller
                   $this->user->register($data);
                   $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
                   Congratulation! your account has been created. </div>');
-                  redirect('home');
+                  redirect('login');
             }
       }
 }
