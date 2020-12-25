@@ -116,7 +116,7 @@
                         <section id="block-menu-menu-netacad-user-menu" class="block block-menu clearfix">
                               <ul class="nav navbar-nav list list list--inline">
                                     <li class="first last expanded dropdown">
-                                          <a href="#" class="dropdown-toggle nav-link  nolink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User</a>
+                                          <a href="#" class="dropdown-toggle nav-link  nolink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $this->session->userdata('email'); ?></a>
                                           <ul class="dropdown-menu">
                                                 <li>
                                                       <a href="#">My Profile</a>
@@ -131,7 +131,7 @@
                                                       <a href="#">Badges</a>
                                                 </li>
                                                 <li>
-                                                      <a href="#">Log Out</a>
+                                                      <a href="<?= base_url('login/logout'); ?>">Log Out</a>
                                                 </li>
                                           </ul>
                                     </li>
