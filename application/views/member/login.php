@@ -23,8 +23,9 @@
                                     Welcome
                               </h3>
                               <br>
+                              <?= $this->session->flashdata('message'); ?>
                               <br>
-                              <form class="form mb-4" action="">
+                              <form method="post" class="form mb-4" action="<?= base_url('login/loginuser'); ?>">
                                     <label for="email" class="form-label">Email or username</label>
                                     <div class="input-group mb-4">
                                           <input class="inputEmail" type="text" id="email" name="email">
