@@ -96,7 +96,7 @@
                         <section id="block-menu-menu-netacad-user-menu" class="block block-menu clearfix">
                               <ul class="nav navbar-nav list list list--inline">
                                     <li class="first last expanded dropdown">
-                                          <a href="#" class="dropdown-toggle nav-link  nolink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User</a>
+                                          <a href="#" class="dropdown-toggle nav-link  nolink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $this->session->userdata('email'); ?></a>
                                           <ul class="dropdown-menu">
                                                 <li>
                                                       <a href="#">My Profile</a>
@@ -111,7 +111,7 @@
                                                       <a href="#">Badges</a>
                                                 </li>
                                                 <li>
-                                                      <a href="#">Log Out</a>
+                                                      <a href="<?= base_url('login/logout'); ?>">Log Out</a>
                                                 </li>
                                           </ul>
                                     </li>
@@ -198,6 +198,56 @@
 
                         </div>
                   </center>
+            </div>
+      </section>
+      <section class="courseCard mb-5">
+            <div class="container">
+                  <div class="row">
+                        <?php
+                        foreach ($course as $row) {
+                        ?>
+                              <div class="col-sm-6">
+                                    <div class="card">
+                                          <div class="card-body">
+                                                <p class="card-text"><?= $row->subtitle; ?></p>
+                                                <div class="container mb-3">
+                                                      <div class="row">
+                                                            <div class="col-lg p-0">
+                                                                  <h5 style="color: #0a79a8;" class="card-title"><?= $row->title; ?></h5>
+                                                            </div>
+                                                            <div class="col-2 align-self-center">
+                                                                  <img height="40" width="40" src="<?= base_url('./assets/image/networking.png'); ?>" alt="">
+                                                            </div>
+                                                      </div>
+                                                </div>
+                                                <p class="card-text"><?= $row->description; ?></p>
+                                                <a href="#" style="background-color: #005073; border: none; border-radius: 30px;" class="btn btn-primary float-right px-4">Learn More</a>
+                                          </div>
+                                    </div>
+                              </div>
+                        <?php
+                        }
+                        ?>
+                        <!-- <div class="col-sm-6">
+                              <div class="card">
+                                    <div class="card-body">
+                                          <p class="card-text">Instructor led</p>
+                                          <div class="container mb-3">
+                                                <div class="row">
+                                                      <div class="col-lg p-0">
+                                                            <h5 style="color: #0a79a8;" class="card-title">CCNA: Introduction to Networks</h5>
+                                                      </div>
+                                                      <div class="col-2 align-self-center">
+                                                            <img height="40" width="40" src="<?= base_url('./assets/image/networking.png'); ?>" alt="">
+                                                      </div>
+                                                </div>
+                                          </div>
+                                          <p class="card-text">The first course in a 3-course CCNA series designed to prepare you for entry-level networking job</p>
+                                          <a href="#" style="background-color: #005073; border: none; border-radius: 30px;" class="btn btn-primary float-right px-4">Learn More</a>
+                                    </div>
+                              </div>
+                        </div> -->
+                  </div>
             </div>
       </section>
 
